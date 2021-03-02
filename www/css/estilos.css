@@ -1,0 +1,12 @@
+.logo{
+	text-align: center;
+}
+.ocultar{
+    visibility: hidden;
+}
+.mostrar{
+    visibility: visible;
+}
+.button{
+	margin-top: 0.3rem;
+}
