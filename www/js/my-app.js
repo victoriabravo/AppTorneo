@@ -44,13 +44,13 @@ $$(document).on('page:init', '.page[data-name="index"]', function (e) {
 
 console.log("entramos a index!")
 
-    $$('#btnLoguear').on('click', cambiarForm);
-
-    $$('#btnIngresar').on('click', function(){
-
+     $$('#btnIngresar').on('click', function(){
         mainView.router.navigate('/categorias/');
-
     })
+
+    $$('#btnLoguear').on('click', cambiarForm);
+    $$('#btnLogin').on('click', fnLogin);
+    
 })
 // Option 2. Using live 'page:init' event handlers for each page
 $$(document).on('page:init', '.page[data-name="categorias"]', function (e) {
@@ -66,3 +66,20 @@ function cambiarForm(){
         $$('#loginForm').removeClass('mostrar').addClass('ocultar')
     } 
 }
+
+function fnLogin(){
+    email = $$('#emailLogin').val();
+    password = $$('#passLogin').val();
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((user) => {
+         mainView.router.navigate('/categorias/');
+         alert("CORRECTOOOOOOOOOO")
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+
+}
+

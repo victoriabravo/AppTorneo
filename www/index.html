@@ -10,7 +10,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -63,12 +63,15 @@
                         <div id="loginForm" class="ocultar">
                             <div class="item-content item-input">
                                 <div class="item-content">
-                                    <input type="email" placeholder="Your e-mail" />
+                                    <input type="email" id="emailLogin" placeholder="Your e-mail" />
                                     <span class="input-clear-button"></span>
                                 </div>
                                 <div class="item-content">   
-                                    <input type="password" placeholder="Ingresá tu contraseña" />
+                                    <input type="password" id="passLogin" placeholder="Ingresá tu contraseña" />
                                     <span class="input-clear-button"></span>
+                                </div>
+                                <div>
+                                    <button class="col button button-fill" id="btnLogin">LogIn</button>
                                 </div>
                             </div>
                         </div>
@@ -81,6 +84,26 @@
     </div>
 
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCLNcjSPtGeOGWc9O6nU_kvMZ3oi2P6W_A",
+        authDomain: "torneo-ede86.firebaseapp.com",
+        projectId: "torneo-ede86",
+        storageBucket: "torneo-ede86.appspot.com",
+        messagingSenderId: "183067744365",
+        appId: "1:183067744365:web:8661022c05f5e7aad10764"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
