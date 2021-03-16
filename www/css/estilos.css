@@ -10,3 +10,8 @@
 .button{
 	margin-top: 0.3rem;
 }
+.panel {
+    min-width: 100px;
+    max-width: 90vw;
+    background-color: red;
+  }

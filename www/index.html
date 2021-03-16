@@ -35,21 +35,41 @@
 
 <body>
     <div id="app">
+        <!-- Nested panel -->
+        <div class="panel panel-left panel-cover panel-init theme-light color-theme-orange" id="panel-nested"
+          data-container-el="#panel-page">
+          <div class="page">
+            <div class="page-content">
+              <div class="block block-strong">
+                <p>Menú</p>
+                <p><a href="/index/" class="panel-close">Inicio</a></p>
+                <p><a href="/categorias/" class="panel-close">Categorías</a></p>
+                <p><a href="/contacto/" class="panel-close">Contacto</a></p>
+                <p><a href="/noticias/" class="panel-close">Noticias</a></p>
+                <p><a href="#" class="panel-close">Cerrar</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Statusbar overlay -->
         <div class="statusbar"></div>
-    
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
             <div data-name="index" class="page color-theme-orange">
             <!-- Top Navbar -->
             <div class="navbar color-theme-orange">
                 <div class="navbar-inner">
+                   <div class="left">
+                       <a href="#" class="panel-open" data-panel="#panel-nested">
+                           <i class="f7-icons">menu</i>
+                       </a>
+                   </div>
                     <div class="title text-color-orange">¡Bienvenido!</div>
                 </div>
             </div>
     
             <!-- Toolbar -->
-            
         <!-- Initial Page, "data-name" contains page name -->
             <div data-name="inicio" class="page color-theme-orange">
                 <!-- Scrollable page content -->
@@ -57,7 +77,7 @@
                     <div class="block">
                         <div class="logo">
                             <img src="img/volleyball.png" alt="logo">
-                        </div>                        
+                        </div>
                         <button class="col button button-fill" id="btnIngresar">Ingresar</button>
                         <button class="col button button-fill" id="btnLoguear">Ingresa con tu usuario</button>
                         <div id="loginForm" class="ocultar">
