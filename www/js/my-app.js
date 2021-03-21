@@ -48,10 +48,19 @@ var app = new Framework7({
   });
 
 var mainView = app.views.create('.view-main');
+var db=firebase.firestore();
+var colClubes = db.collection('equipos');
+var colUsuarios = db.collection('usuarios');
+var rolUser = "";
+
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+
+    //fnIniciarEquipos();
+    //  fnIniciarUsuarios();
+
 });
 
 // Option 1. Using one 'page:init' handler for all pages
@@ -64,7 +73,6 @@ $$(document).on('page:init', '.page[data-name="index"]', function (e) {
 
 console.log("entramos a index!")
 
-  
    
 })
      $$('#btnIngresar').on('click', function(){
@@ -74,7 +82,7 @@ console.log("entramos a index!")
     $$('#btnLoguear').on('click', cambiarForm);
     $$('#btnLogin').on('click', fnLogin);
     
-
+ 
 // Option 2. Using live 'page:init' event handlers for each page
 $$(document).on('page:init', '.page[data-name="categorias"]', function (e) {
     
@@ -92,6 +100,38 @@ $$(document).on('page:init', '.page[data-name="categorias"]', function (e) {
 $$(document).on('page:init', '.page[data-name="equiposA1"]', function (e) {
     
     console.log("entramos a equiposA1!")
+
+    colClubes.get()
+    .then(function(querySnapShot){
+      querySnapShot.forEach(function(doc){
+        nombreClub = doc.data().Nombre;
+        ptosClub= doc.data().Puntos;
+        id = doc.id;
+
+        filaNom="<div '"+id+"'>"+nombreClub+"</div>"
+        filaPto="<div><input class=inputPtos value=0 '"+id+"'"+ptosClub+"></div>"
+
+        $$('#colEq').append(filaNom);
+        $$('#colPtos').append(filaPto);
+      })
+    })
+
+if(rolUser == "Administrador"){
+  console.log("Rol que puede editar")
+  $$('.inputPtos').prop('disabled', true);
+  $$('#btnPtos').addClass('mostrar');
+
+  $$('#editarPtos').on('click', editInputs);
+  $$('#guardarPtos').on('click', guardarCambios);
+
+}else{
+  $$('.inputPtos').prop('disabled', true);
+  $$('#btnPtos').addClass('ocultar');
+}
+
+
+
+
     $$('#fechas').on('click', function(){
       mainView.router.navigate('/fechas/');
     })
@@ -124,17 +164,89 @@ function cambiarForm(){
 };
 
 function fnLogin(){
-    email = $$('#emailLogin').val();
-    password = $$('#passLogin').val();
-
+  var email = $$('#emailLogin').val();
+  var password = $$('#passLogin').val(); 
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then((user) => {
+
+         alert("Siiiii")
          mainView.router.navigate('/categorias/');
-         alert("CORRECTOOOOOOOOOO")
+
+        idUser = email;
+        var docRef = colUsuarios.doc(idUser);
+
+        docRef.get().then((doc)=>{
+          rolUser = doc.data().Rol;
+
+        })
+
+           
+
+         
       })
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
       });
+    
 
+      
 }
+
+
+        
+
+function fnIniciarEquipos(){
+var clubId = "EFC";
+var datos ={Nombre: "Echesortu F.C.", Categoria: "Primera",Division: "A1",Equipo: "A",Dt:"Juan Perez", Puntos:0}
+  colClubes.doc(clubId).set(datos);
+
+clubId = "CNR" ;
+datos ={  Nombre: "Club Nautico", Categoria: "Primera",Division:"A1" ,Equipo: "C", Dt:"Jose Garcia", Puntos:0};
+colClubes.doc(clubId).set(datos);
+}
+
+function fnIniciarUsuarios(){
+
+  var userId = "admin@admin.com";
+  var users = {Nombre: "Pablo", Apellido: "Martinez", Dni: 12369878, Rol: "Administrador", Club: ""}
+  colUsuarios.doc(userId).set(users)
+
+  var userId = "arbitro1@arbitros.com";
+  var users = {Nombre: "Mario", Apellido: "Fernandez", Dni: 12345678, Rol: "Arbitro", Club: ""}
+  colUsuarios.doc(userId).set(users)
+
+  var userId = "dt@dt.com";
+  var users = {Nombre: "Luis", Apellido: "Suarez", Dni: 10453287, Rol: "Entrenador", Club: ""}
+  colUsuarios.doc(userId).set(users)
+}
+
+function editInputs(){
+  $$('.inputPtos').prop('disabled', false);
+}
+
+function guardarCambios(){
+
+  var ptosActuales = $$('.inputPtos').val();
+
+  console.log(ptosActuales)
+  db.collection("equipos").doc(id).update({Puntos: ptosActuales})
+  .then(function() {
+
+console.log("actualizado ok");
+$$('.inputPtos').prop('disabled', true);
+
+})
+.catch(function(error) {
+
+console.log("Error: " + error);
+
+});
+
+db.collection("equipos").doc(id)
+.onSnapshot((doc) => {
+  ptosClub= doc.data().Puntos;
+        console.log("Current data: ", ptosClub);
+    });
+}
+

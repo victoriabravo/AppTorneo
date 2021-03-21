@@ -35,29 +35,26 @@
     <div class="page-content">
         <div class="block-title">Tabla de Resultados A1</div>
         <div class="block block-strong">
-            <div class="data-table card">
+            <!--<div class="data-table card">
               <table>
                 <thead>
                   <tr>
                     <th class="label-cell">Club</th>
                     <th class="numeric-cell">Puntos</th>
-                    <th class="medium-only">División</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td class="label-cell">Echesortu F.C.</td>
-                    <td class="numeric-cell">10</td>
-                    <td class="medium-only">PRIMERA</td>
-                  </tr>
-                  <tr>
-                    <td class="label-cell">C.A.R.C.</td>
-                    <td class="numeric-cell">8</td>
-                    <td class="medium-only">PRIMERA</td>
-                  </tr>
-                  
-                </tbody>
+                <tbody id="listEq"> </tbody>
               </table>
+
+            </div>-->
+            <div class="row" id="listEq">
+              <div class="col" id="colEq">Equipo</div>
+              <div class="col" id="colPtos">Puntos</div>
+            </div>
+            <br>
+            <div class ="row ocultar" id="btnPtos">
+              <button class="col button button-fill" id="editarPtos">Editar puntos</button>
+            <button class="col button button-fill" id="guardarPtos">Guardar cambios</button>
             </div>
             <button class="col button button-fill" id="fechas">Ver próximas fechas</button>
         </div>
