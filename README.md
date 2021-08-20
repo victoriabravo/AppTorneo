@@ -40,5 +40,14 @@ load the personal data of each of their players.(Try it with the following data!
 
 ## Screens / Preview
 
+https://github.com/victoriabravo/AppTorneo/blob/main/screens/Inicio.png
+
+https://github.com/victoriabravo/AppTorneo/blob/main/screens/pantalla1.png
+
+https://github.com/victoriabravo/AppTorneo/blob/main/screens/pantalla2.png
+
+https://github.com/victoriabravo/AppTorneo/blob/main/screens/pantalla3.png
+
+https://github.com/victoriabravo/AppTorneo/blob/main/screens/pantalla4.png
 
 
