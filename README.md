@@ -1,22 +1,43 @@
 
-# Bienvenid@!! 
+# App Torneo de Voley 
+*Español*
 
-En este repositorio podés encontrar un template de Framework7 listo para usar para el desarrollo de aplicaciones con Apache Cordova.
+Aplicación que permite la gestión del torneo de voley local, permitiendo tener información actualizada al instante de finalizados los partidos, 
+tablas de puntuación, información oficial,etc. A su vez, permite a los clubes la carga de documentación necesaria para participar del mismo,
+reduciendo así los tiempos de los trámites, y los papeles en circulación.
+-Desarrollada para el egreso de curso de Desarrollo Mobile.
+-Desarrollo con Framework7.
+-Base de datos: Firebase.
 
-## Qué es [Framework7](https://framework7.io/)?
+*Descripción*
+Se podrá ingresar tanto como un usuario como visita(para quienes quieran conocer los resultados de partidos, boletín oficial,etc).
+Los usuarios 'administrador' y 'arbitro' son los únicos autorizados a modificar los puntos en las tablas
+El usuario 'Institución', serán los clubes, podrá cargar imágenes(de carnets de jugadoras y entrenadores, comprobantes de pago) y a su vez
+cargar los datos personales de cada una de sus jugadoras.(¡Probalo con los siguientes datos!: user: eche@club.com ;contraseña: club123)
 
-Es un framework CSS con una librería propia de manejo del DOM, similar a JQuery.
-El resultado de las aplicaciones respeta los estilos de iOS/Android como si fueran nativas.
+#Instalación
+-Clonar el proyecto y correrlo con Cordova Apache
 
-## [Apache Cordova](https://cordova.apache.org/)
 
-Nos permite el desarrollo de aplicaciones híbridas. Y de esta manera con un solo código poner tener aplicaciones para Android e iOS.
+*English*
 
-## Cómo descargo el template?
+Application that allows the management of the local volleyball tournament, allowing to have updated information at the moment of the end of the matches,
+scoreboards, official information, etc. Also, it allows the clubs the burden of documentation necessary to participate in it,
+thus reducing the time for formalities, and the papers in circulation.
+-Developed for the graduate of Mobile Development course.
+-Development with Framework7.
+-Database: Firebase.
 
-Crea y/o ingresa a tu carpeta inicial del desarrollo. Descarga el template con el comando:
+*Description*
 
-    git clone https://github.com/JorgePHI/f7-v606
+You can enter as much as a user as a visit (for those who want to know the results of matches, official bulletin, etc).
+The 'administrator' and 'referee' users are the only ones authorized to modify the points in the tables
+The user 'Institution', will be the clubs, will be able to load images (of cards of players and coaches, proof of payment) and in turn
+load the personal data of each of their players.(Try it with the following data!: user: eche@club.com ;password: club123)
 
-Ingresando luego en la carpeta f7-v606 podrá usar el template de Framework 7, Version 6.0.6
+
+
+## Screens / Preview
+
+
 
