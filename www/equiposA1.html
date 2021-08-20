@@ -1,6 +1,6 @@
 <div class="page color-theme-orange" data-name="equiposA1">
 
-  <div class="panel panel-left panel-cover panel-init theme-light color-theme-orange" id="panel-nested"
+<!--  <div class="panel panel-left panel-cover panel-init theme-light color-theme-orange" id="panel-nested"
               data-container-el="#panel-page">
         <div class="page">
             <div class="page-content">
@@ -10,17 +10,18 @@
                     <p><a href="/categorias/" class="panel-close">Categorías</a></p>
                     <p><a href="/contacto/" class="panel-close">Contacto</a></p>
                     <p><a href="/noticias/" class="panel-close">Noticias</a></p>
-                    <p><a href="#" class="panel-close">Cerrar</a></p>
+                    <p><a href="#" class="panel-close">Cerrar menú</a></p>
+                    <p><a id="btnLogout" class="panel-close">Salir</a></p>
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <div class="navbar">
         <div class="navbar-bg bg-color-orange"></div>
         <div class="navbar-inner">
           <div class="left">
                 <a href="#" class="panel-open color-white" data-panel="#panel-nested">
-                  <i class="f7-icons">menu</i>
+                  <i class="f7-icons">spline_horizontal_3</i>
                 </a>
             </div>
         <div class="title text-color-white">Equipos División A1</div>
@@ -35,22 +36,13 @@
     <div class="page-content">
         <div class="block-title">Tabla de Resultados A1</div>
         <div class="block block-strong">
-            <!--<div class="data-table card">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="label-cell">Club</th>
-                    <th class="numeric-cell">Puntos</th>
-                  </tr>
-                </thead>
-                <tbody id="listEq"> </tbody>
-              </table>
-
-            </div>-->
             <div class="row" id="listEq">
               <div class="col" id="colEq">Equipo</div>
-              <div class="col" id="colPtos">Puntos</div>
+              <div class="col">Puntos
+                <div><input type="number" class="inputPtos" value="0" id="ptosEche"></div>
+                <div><input type="number" class="inputPtos" value="0" id="ptosCnr"></div>
             </div>
+        </div>
             <br>
             <div class ="row ocultar" id="btnPtos">
               <button class="col button button-fill" id="editarPtos">Editar puntos</button>

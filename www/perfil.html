@@ -1,0 +1,91 @@
+<div class="page color-theme-orange" data-name="perfil">
+
+<!--  <div class="panel panel-left panel-cover panel-init theme-light color-theme-orange" id="panel-nested"
+              data-container-el="#panel-page">
+        <div class="page">
+            <div class="page-content">
+                <div class="block block-strong">
+                    <p>Menú</p>
+                    <p><a href="/index/" class="panel-close">Inicio</a></p>
+                    <p><a href="/categorias/" class="panel-close">Categorías</a></p>
+                    <p><a href="/contacto/" class="panel-close">Contacto</a></p>
+                    <p><a href="/noticias/" class="panel-close">Noticias</a></p>
+                    <p><a href="#" class="panel-close">Cerrar menú</a></p>
+                    <p><a id="btnLogout" class="panel-close">Salir</a></p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="navbar">
+        <div class="navbar-bg bg-color-orange"></div>
+        <div class="navbar-inner">
+          <div class="left">
+                <a href="#" class="panel-open color-white" data-panel="#panel-nested">
+                  <i class="f7-icons">spline_horizontal_3</i>
+                </a>
+            </div>
+        <div class="title text-color-white">Perfil Institucion</div>
+        </div>
+    </div>
+    <div class="toolbar toolbar-bottom bg-color-orange">
+        <div class="toolbar-inner">
+         <!-- Toolbar links -->
+            
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="block-title">Carga de datos</div>
+        <div class="block block-strong">
+          
+            <div class ="row">
+              <button class="col button button-fill btnPerfil" id="btnCarnet">Carnets</button>
+              <button class="col button button-fill btnPerfil" id="btnCamara">Transferencia</button>
+              <button class="col button button-fill btnPerfil" id="cargaJug">Cargar jugador</button>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img src="" alt="" id="foto">
+          </div>
+        </div>
+
+        <div class="block-title ocultar inputJug" >Información necesaria</div>
+            <div class="item-content item-input inputJug">
+
+              <div class="item-content item-input item-input-outline ocultar inputJug">
+                  <input type="text" id="nombreJug" placeholder="Nombre de la jugadora" />
+              </div>
+              <div class="item-content item-input item-input-outline ocultar inputJug">
+                  <input type="text" id="apeJug" placeholder="Apellido de la jugadora" />
+              </div>
+              <div class="item-content item-input item-input-outline ocultar inputJug">
+                  <input type="text" id="dniJug" placeholder="Dni de la jugadora" />
+              </div>
+              <div class="item-content item-input item-input-outline ocultar inputJug">
+                  <input type="email" id="emailJug" placeholder="Email de la jugadora" />
+              </div>
+              <div class="item-content item-input item-input-outline ocultar inputJug">
+                  <input type="text" id="clubJug" placeholder="Club de la jugadora" />
+              </div>
+              <div class="item-content item-input item-input-outline ocultar inputJug">
+                  <input type="text" placeholder="Imagen del carnet" />
+              </div>
+              <div class="row">
+              <button class="col button button-fill ocultar inputJug" id="guardarJug">Guardar jugador</button>
+              <button class="col button button-fill ocultar inputJug" id="cerrarJug">Cerrar</button>
+              </div>
+            </div><br>
+<!--listado de jugadoras -->
+          <div class="block-title">Listado de jugadoras</div>
+            <div class="block block-strong">
+                <div class="row" id="listJug">
+                  <div class="col" id="colNom">Nombre</div>
+                  <div class="col" id="colApe">Apellido</div>
+                  <div class="col" id="colDni">Dni</div>
+                  <div class="col" id="colClub">Club</div>
+          </div>
+
+
+      </div>
+    </div>
+  </div>

@@ -46,7 +46,9 @@
                 <p><a href="/categorias/" class="panel-close">Categorías</a></p>
                 <p><a href="/contacto/" class="panel-close">Contacto</a></p>
                 <p><a href="/noticias/" class="panel-close">Noticias</a></p>
-                <p><a href="#" class="panel-close">Cerrar</a></p>
+                <p><a href="/fechas/" class="panel-close">Próximas fechas</a></p>
+                <p><a href="#" class="panel-close">Cerrar menú</a></p>
+                <p><a id="btnLogout" class="panel-close">Cerrar sesión</a></p>
               </div>
             </div>
           </div>
@@ -60,23 +62,23 @@
             <!-- Top Navbar -->
             <div class="navbar color-theme-orange">
                 <div class="navbar-inner">
-                   <div class="left">
-                       <a href="#" class="panel-open" data-panel="#panel-nested">
-                           <i class="f7-icons">menu</i>
-                       </a>
-                   </div>
+                    <div class="left">
+                        <a href="#" class="panel-open color-white" data-panel="#panel-nested">
+                            <i class="f7-icons">spline_horizontal_3</i>
+                        </a>
+                     </div>
                     <div class="title text-color-orange">¡Bienvenido!</div>
                 </div>
             </div>
     
             <!-- Toolbar -->
-        <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="inicio" class="page color-theme-orange">
+        <!-- Initial Page, "data-name" contains page name 
+            <div data-name="index" class="page color-theme-orange">-->
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
                         <div class="logo">
-                            <img src="img/volleyball.png" alt="logo">
+                            <img src="img/woman_voley.jpg" alt="logo">
                         </div>
                         <button class="col button button-fill" id="btnIngresar">Ingresar</button>
                         <button class="col button button-fill" id="btnLoguear">Ingresa con tu usuario</button>
@@ -99,14 +101,13 @@
                         
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>

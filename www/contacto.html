@@ -1,5 +1,5 @@
 <div class="page color-theme-orange" data-name="contacto">
-  <div class="panel panel-left panel-cover panel-init theme-light color-theme-orange" id="panel-nested"
+ <!-- <div class="panel panel-left panel-cover panel-init theme-light color-theme-orange" id="panel-nested"
               data-container-el="#panel-page">
         <div class="page">
             <div class="page-content">
@@ -9,15 +9,19 @@
                     <p><a href="/categorias/" class="panel-close">Categorías</a></p>
                     <p><a href="/contacto/" class="panel-close">Contacto</a></p>
                     <p><a href="/noticias/" class="panel-close">Noticias</a></p>
+                    <p><a href="#" class="panel-close">Cerrar menú</a></p>
+                    <p><a id="btnLogout" class="panel-close">Salir</a></p>
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <div class="navbar">
         <div class="navbar-bg bg-color-orange"></div>
         <div class="navbar-inner">
           <div class="left">
-                <a href="#" class="panel-open color-white" data-panel="#panel-nested">ABRIR</a>
+                <a href="#" class="panel-open color-white" data-panel="#panel-nested">
+                  <i class="f7-icons">spline_horizontal_3</i>
+                </a>
             </div>
         <div class="title text-color-white">Contacto</div>
         </div>
@@ -40,9 +44,8 @@
                         <div class="item-inner">
                           <div class="item-title item-label">Nombre</div>
                           <div class="item-input-wrap">
-                            <input type="text" placeholder="Ingrese su nombre" required validate />
+                            <input type="text" required validate />
                             <span class="input-clear-button"></span>
-                            <div class="item-input-info">Default "required" validation</div>
                           </div>
                         </div>
                       </li>
@@ -53,9 +56,8 @@
                         <div class="item-inner">
                           <div class="item-title item-label">E-mail</div>
                           <div class="item-input-wrap">
-                            <input type="email" placeholder="Ingrese su e-mail" required validate />
+                            <input type="email" required validate />
                             <span class="input-clear-button"></span>
-                            <div class="item-input-info">Default e-mail validation</div>
                           </div>
                         </div>
                       </li>

@@ -1,5 +1,9 @@
 .logo{
 	text-align: center;
+	width: 70%;
+}
+.logo> img{
+	border-radius: 45%;
 }
 .ocultar{
     visibility: hidden;
@@ -15,3 +19,15 @@
     max-width: 90vw;
     background-color: red;
   }
+.inputJug{
+	justify-content: center
+}
+.btnPerfil{
+	font-size: 10px;
+}
+#foto{
+	 width:35%;
+}
+.tabla{
+	width: 100%;
+}
