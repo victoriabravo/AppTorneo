@@ -15,7 +15,7 @@ Los usuarios 'administrador' y 'arbitro' son los únicos autorizados a modificar
 El usuario 'Institución', serán los clubes, podrá cargar imágenes(de carnets de jugadoras y entrenadores, comprobantes de pago) y a su vez
 cargar los datos personales de cada una de sus jugadoras.(¡Probalo con los siguientes datos!: user: eche@club.com ;contraseña: club123)
 
-#Instalación
+**Instalación**
 -Clonar el proyecto y correrlo con Cordova Apache
 
 
@@ -35,7 +35,8 @@ The 'administrator' and 'referee' users are the only ones authorized to modify t
 The user 'Institution', will be the clubs, will be able to load images (of cards of players and coaches, proof of payment) and in turn
 load the personal data of each of their players.(Try it with the following data!: user: eche@club.com ;password: club123)
 
-
+**Installation**
+-Clone the repository and run it with Cordova Apache
 
 ## Screens / Preview
 
